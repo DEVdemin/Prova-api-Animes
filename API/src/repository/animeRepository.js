@@ -11,7 +11,7 @@ export async function InserirAnime(Nome) {
 };
 
 export async function ListarAnimes() {
-    const comando = `select nm_anime nome from tb_anime`
+    const comando = `select nm_anime nome, id_anime id from tb_anime`
     const [resposta] = await con.query(comando)
     return resposta
 };
